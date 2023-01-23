@@ -1,0 +1,91 @@
+/* Ändrar från grid till block för att ändra stylen från föregående css dokument */
+main {
+    display: block;
+}
+
+main section {
+    background-image: none;
+    text-align: center;
+    margin-top: 5vh;
+}
+
+/* Grid för att dela upp produkterna i ett 3x3 nät*/
+/* Placerar föremål i centrum och tar bort föregående styling för padding och margin */
+/* Flyttar även ner sektionen för att balansera ut hemsidan så att den ser välbyggd ut med margin-top */
+main section {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+
+    place-items: center;
+    place-content: center;
+
+    padding: 0;
+    margin: 0;
+
+    margin-top: 9vh;
+}
+
+
+main section aside {
+    background-color: orange;
+    width: 300px;
+    height: 150px;
+    padding: 0;
+    margin: 0;
+    background-size: cover;
+    border-radius: 20px;
+    font-size: 25px;
+    color: white;
+}
+
+main section h2 {
+    position: fixed;
+    top: 13vh;
+}
+
+/* Produktknapparna får en shadow för att synas tydligare */
+
+main section aside button {
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+/* Samtliga produkter och bilder till de */
+
+main section aside:nth-child(2) {
+    background-image: url("image/product.jpg");
+}
+
+main section aside:nth-child(3) {
+    background-image: url("image/product.jpg");
+}
+
+main section aside:nth-child(4) {
+    background-image: url("image/product.jpg");
+}
+
+main section aside:nth-child(5) {
+    background-image: url("image/product.jpg");
+}
+
+main section aside:nth-child(6) {
+    background-image: url("image/product.jpg");
+}
+
+main section aside:nth-child(7) {
+    background-image: url("image/product.jpg");
+}
+
+main section aside:nth-child(8) {
+    background-image: url("image/product.jpg");
+}
+
+main section aside:nth-child(9) {
+    background-image: url("image/product.jpg");
+}
+
+main section aside:nth-child(10) {
+    background-image: url("image/product.jpg");
+}

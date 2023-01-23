@@ -1,0 +1,130 @@
+/* Importerar roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+/* Padding: 0 tar bort standardpadding */
+/* Margin: 0 tar bort standardmargin */
+/* Box-sizing: border-box anpassar elements storlekar efter padding och margin och ändrar de därefter */
+/* Font-Family ändrar fonten på alla element på hela sidan till Roboto familjen */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+}
+
+body {
+    padding-inline: 5vw;
+    background: linear-gradient(90deg, rgb(171, 255, 171), rgb(135, 255, 135));
+}
+
+/* Definierar bredd och höjd för samtliga knappar på hemsidan, detta blir ett standardvärde och andra knappar kan jag ändra manuellt.*/
+/* Använder mig av em som anpassar sig efter fontens storlek och är proportionell och anpassningsbar */
+/* Har även cursor: pointer för att förtydliga att det är en knapp som går att trycka på */
+.button {
+    width: 10em;
+    height: 2.5em;
+
+    background: rgb(206, 131, 255);
+    border: none;
+    cursor: pointer;
+
+    display: grid;
+    place-items: center;
+}
+
+/* Standardstyling för alla a taggar, tar bort link stylen och ändrar färgen till vit*/
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* En still för knappar när man håller över de, använder filter och ändrar ljuststyrkan */
+.button:hover {
+    filter: brightness(0.85);
+}
+
+/* Styling för navbaren med grid layout i 3 kolumner och 1 rad. Knapp, logga, Knapp */
+/* Placerar samtliga element i mitten av dess ruta */
+/* Lägger även en top/bottom padding med padding-block på 2rem, ännu ett användbart mått för att ge utrymme och responsivitiet. */
+nav {
+    background-color: rgb(143, 212, 255);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    place-items: center;
+
+    min-height: 10vh;
+    max-height: 10vh;
+
+    width: 110vw;
+    margin-left: -10vw;
+}
+
+/* Anpassar bildens storlek efter skärmens storlek, skapar responsivitet och så att oavsett vem som besöker hemsidan så skall det fortfarande se bra ut. */
+nav img {
+    max-height: 7vh;
+}
+
+/* Huvudsektion med full bredd, delas upp i två kolummer på en rad, varsin aside */
+main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+/* Asidsen är 45% av heal bredden, och har 40% av total höjden */
+/* Använder grid för att placera element i mitten och alignat text i mitten */
+/* Margin top för att separera från resten av sidans delar */
+main aside {
+    width: 45vw;
+    height: 40vh;
+    display: grid;
+    place-content: center;
+    text-align: center;
+
+    margin-top: 5vh;
+}
+
+/* Lägger till en bakgrundsbild för första elemntet i parenten main, alltså första asiden */
+/* Använder diverse egenskaper för att bakgrunden skall behålla sin storlek och vara skalbar */
+main aside:nth-child(1) {
+    background-image: url("https://www.wilfa.se/wp-content/uploads/2020/06/Grundrecept-glass-2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Storlek får 100%, Centrerar text, och puttar iväg den 5vh från ovangående element */
+article {
+    width: 100%;
+    text-align: center;
+    margin-top: 5vh;
+}
+
+/* Fixad till botten, full bredd med margin för att kunna undgå bodys originella padding. */ 
+/* Bakgrundsfärg, och griduppdelning med tre kolummer, 1 rad utan gap, placerar föremål i mitten */
+footer {
+    position: fixed;
+    bottom: 0%;
+    width: 105vw;
+    height: 25vh;
+    background: rgb(206, 131, 255);
+    margin-left: -10vw;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    place-items: center;
+}
+
+/* Centrerar text i footer elementen */
+footer aside {
+    text-align: center;
+}

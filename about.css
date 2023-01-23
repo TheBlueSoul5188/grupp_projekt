@@ -1,0 +1,75 @@
+/* Huvudsektion med full bredd, delas upp i två kolummer på en rad, varsin aside */
+.main-section2 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+    place-items: center;
+}
+
+/* Asidsen är 35% av heal bredden, och har 20% av total höjden */
+/* Använder grid för att placera element i mitten och alignat text i mitten */
+/* Margin top för att separera från resten av sidans delar */
+.main-section2 aside {
+    width: 35vw;
+    height: 20vh;
+    display: grid;
+    place-content: center;
+    text-align: center;
+
+    margin-top: 5vh;
+}
+
+/* Första asiden får en bakgrundsbild med nth-child */
+.main-section2 aside:nth-child(1) {
+    background-image: url("https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png");
+}
+
+/* Skapar ett 2x1 rutnät */
+.main2 {
+    margin-top: -1.25vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    overflow-y: hidden;
+
+    place-items: center;
+}
+
+/* Tar bort urspringliga bakgrunden från första asiden */
+.main2 aside:nth-child(1) {
+    background: none;
+}
+
+/* Ändrar storlek och position av samtliga asides */
+.main2 aside {
+    width: 40vw;
+    height: 15vh;
+    margin-right: 10vh;
+    
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+    background: none;
+    place-content: center;
+    
+}
+
+.main2 aside img {
+    height: 100%; 
+}
+
+.main2 aside section {
+    display: grid;
+    place-items: center;
+}
+
